@@ -28,8 +28,9 @@ namespace Topic12Assigment
             totalPrice = price * quantity;
             lblTotalPrice.ForeColor = Color.Red;
             lblTotalPrice.Text = "Total for " + quantity + " " + item + "(s): " + totalPrice.ToString("C");
+            //ae
         }
 
-        
+
     }
 }
