@@ -24,11 +24,11 @@ namespace Topic12Assigment
             double price, totalPrice;
             item = txtItem.Text;
             price = Convert.ToDouble(txtPrice.Text);
-            quantity = Convert.ToInt32(txtQuantity.Text);
-            totalPrice = price * quantity;
+            quantity = Convert.ToInt32(updQuantity.Value);
+            totalPrice = (price * quantity) + (price * 0.13);
             lblTotalPrice.ForeColor = Color.Red;
             lblTotalPrice.Text = "Total for " + quantity + " " + item + "(s): " + totalPrice.ToString("C");
-            //ae
+            
         }
 
 

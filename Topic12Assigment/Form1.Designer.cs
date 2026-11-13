@@ -30,12 +30,13 @@
         {
             this.txtItem = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.btnCalculatePrice = new System.Windows.Forms.Button();
             this.lblItem = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.updQuantity = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.updQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // txtItem
@@ -57,16 +58,6 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(100, 20);
             this.txtPrice.TabIndex = 1;
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.BackColor = System.Drawing.SystemColors.MenuText;
-            this.txtQuantity.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.ForeColor = System.Drawing.Color.LawnGreen;
-            this.txtQuantity.Location = new System.Drawing.Point(133, 86);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantity.TabIndex = 2;
             // 
             // btnCalculatePrice
             // 
@@ -123,22 +114,38 @@
             this.lblTotalPrice.TabIndex = 7;
             this.lblTotalPrice.Text = "Total Price:";
             // 
+            // updQuantity
+            // 
+            this.updQuantity.BackColor = System.Drawing.SystemColors.MenuText;
+            this.updQuantity.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updQuantity.ForeColor = System.Drawing.Color.LawnGreen;
+            this.updQuantity.Location = new System.Drawing.Point(133, 87);
+            this.updQuantity.Maximum = new decimal(new int[] {
+            8008135,
+            0,
+            0,
+            0});
+            this.updQuantity.Name = "updQuantity";
+            this.updQuantity.Size = new System.Drawing.Size(100, 20);
+            this.updQuantity.TabIndex = 9;
+            // 
             // FormInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(250, 277);
+            this.Controls.Add(this.updQuantity);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblItem);
             this.Controls.Add(this.btnCalculatePrice);
-            this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtItem);
             this.Name = "FormInput";
             this.Text = "User Input";
+            ((System.ComponentModel.ISupportInitialize)(this.updQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,12 +155,12 @@
 
         private System.Windows.Forms.TextBox txtItem;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Button btnCalculatePrice;
         private System.Windows.Forms.Label lblItem;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.NumericUpDown updQuantity;
     }
 }
 
